@@ -1,0 +1,17 @@
+.navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .nav-item {
+      font-size: large;
+      align-items: stretch;
+  }
+  .navbar-brand>img {
+    padding: 7px 14px;
+    width:30%;
+  }
+  #sign-up{
+      background-color:#F91944;
+      border-radius: 25px;
+      color: white;
+  }

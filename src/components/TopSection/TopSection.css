@@ -1,0 +1,25 @@
+#top-section{
+    background-image: url('../../Images/bannerbackground.png');
+    height: 400px;
+    background-size: cover;   
+}
+.text-center{
+    padding-top: 150px;
+}
+#input{
+    width: 400px;
+    box-sizing:content-box;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+}
+#search{
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    background-color:#F91944;
+    color: white;
+}
+#size{
+    width:50%;
+}
