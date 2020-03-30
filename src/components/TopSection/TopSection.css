@@ -1,7 +1,8 @@
 #top-section{
     background-image: url('../../Images/bannerbackground.png');
-    height: 400px;
-    background-size: cover;   
+    height: 200px;
+    
+    background-size: cover;
 }
 .text-center{
     padding-top: 150px;
@@ -19,7 +20,4 @@
     padding: 10px 30px;
     background-color:#F91944;
     color: white;
-}
-#size{
-    width:50%;
 }

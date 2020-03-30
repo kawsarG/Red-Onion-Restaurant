@@ -5,7 +5,8 @@ import im from '../../components/Header/logo2.png';
 
 export default function Footer() {
     return (
-        <div id="footer" className="row">
+        <div>
+            <div id="footer" className="row">
             <div className="col-6 pt-5">
                 <img src={im} alt=""></img>
             </div>
@@ -30,6 +31,14 @@ export default function Footer() {
                         </p>
                     </div>
                 </div>
+            </div>
+            
+        </div>
+        <div className="row calar">
+                <div className="col-5">&copy; All Rights Reserved</div>
+                <div className="col-3">Privacy Policy</div>
+                <div className="col-2">Terms Of Use</div>
+                <div className="col-2">Pricing</div>
             </div>
         </div>
     )

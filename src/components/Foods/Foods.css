@@ -1,0 +1,33 @@
+#category{
+    padding-bottom: 20px;
+}
+.text-center{
+    padding: 50px 0 0;
+}
+
+#foods button:hover{
+    color: red;
+}
+#foods img{
+    height: 250px;
+    width: 250px;
+
+}
+#decoration{
+    text-decoration: none;
+    color: black;
+}
+.foods{
+    float: left;
+}
+#foods .button1{
+    border: none;
+    background-color: white;
+    font-size:28px;
+}
+button:active{
+    text-decoration:unset;
+}
+.view{
+    margin-left: 8px;
+}

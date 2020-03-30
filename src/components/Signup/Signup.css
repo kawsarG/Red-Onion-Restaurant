@@ -1,0 +1,10 @@
+.signupbtn1 {
+    float: left;
+    width: 100% !important; 
+    border-radius: 10px;
+  }
+  .center3{
+      color: red;
+      margin-left: 200px;
+      margin-bottom: 30px;
+  }
