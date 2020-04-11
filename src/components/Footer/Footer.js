@@ -7,34 +7,35 @@ export default function Footer() {
     return (
         <div>
             <div id="footer" className="row">
-            <div className="col-6 pt-5">
-                <img src={im} alt=""></img>
-            </div>
-            <div className="col-6">
-                <div className="row">
-                    <div className="col pt-5">
-                        <p>About Online Foods
+                <div className="col-6 pt-5">
+                    <img src={im} alt=""></img>
+                </div>
+                <div className="col-6">
+                    <div className="row">
+                        <div className="col pt-5">
+                            <p><a href="/manage-inventory" style={{color:'red',textDecoration:'none'}}>Manage Inventory</a></p>
+                            <p>About Online Foods
                         </p>
-                        <p>Read Our Blog
+                            <p>Read Our Blog
                         </p>
-                        <p>Sign Up to deliber
+                            <p>Sign Up to deliber
                         </p>
-                        <p>Add your Restaurant
+                            <p>Add your Restaurant
                         </p>
-                    </div>
-                    <div className="col pt-5">
-                    <p>Get Help
+                        </div>
+                        <div className="col pt-5">
+                            <p>Get Help
                         </p>
-                        <p>View FAQs
+                            <p>View FAQs
                         </p>
-                        <p>Find Us
+                            <p>Find Us
                         </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
-            
-        </div>
-        <div className="row calar">
+            <div className="row calar">
                 <div className="col-5">&copy; All Rights Reserved</div>
                 <div className="col-3">Privacy Policy</div>
                 <div className="col-2">Terms Of Use</div>

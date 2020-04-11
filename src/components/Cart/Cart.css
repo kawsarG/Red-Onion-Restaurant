@@ -6,10 +6,16 @@ img{
     margin-left: 80px;
     width: 50%;
 }
+.map img{
+    border-radius: 5px;
+}
 #foody{
     background-color: turquoise;
     margin-bottom: 10px;
     padding-top: 5px;
+    border-radius: 5px;
+   
+
 }
 .foodSection img{
     

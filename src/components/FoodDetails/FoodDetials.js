@@ -1,13 +1,19 @@
-import React,{useState} from 'react'
+import React ,{useState}from 'react'
 import { useParams } from 'react-router-dom'
-import { Breakfast, Launch, Dinner } from '../../Data/Data';
 import './FoodDetails.css'
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../Login/useAuth';
+import { useEffect } from 'react';
+
 
 
 export default function FoodDetials(props) {
-    
+
+    const [food,setFood]=useState({
+      name:'',
+      url:'',
+      price:''
+    })  
     const auth=useAuth();
     let price=0;
     let i = 0;
@@ -17,29 +23,31 @@ export default function FoodDetials(props) {
         foods[Key] = JSON.parse(window.localStorage.getItem(Key));
         price=price+parseInt(foods[Key].price);
     }
-    console.log(price)
     let count=localStorage.length;
     let data=[];
     const { id } = useParams();
-       if(id<7){
-         data=Breakfast.find(data=>data.id===id);
-         
-       }
-       else if(id<13){
-         data=Launch.find(data=>data.id===id);
-        
-       }
-       else{
-         data=Dinner.find(data=>data.id===id);
-       
-       }
+    //useEffect
+    const task=()=>{
+      fetch(`https://still-gorge-33451.herokuapp.com/food/${id}`).then(res=>res.json()).
+      then(res=>setFood(res));
+    }
+    useEffect(()=>{
+       task();
+    },[])
+
     const handleOrder=()=>{
-        if(auth.kawsar)
-        window.location.href='/cart';
+        if(auth.kawsar && localStorage.length>0){
+          localStorage.setItem(data.id, JSON.stringify(data));
+          window.location.href='/cart';
+        }
+        else{
+          window.location.href='/login'; 
+        }
+        
     }  
   
     const AddTocart=()=>{
-      localStorage.setItem(id,JSON.stringify(data));
+      localStorage.setItem(id,JSON.stringify(food));
       window.location.reload();
       
     }
@@ -49,11 +57,11 @@ export default function FoodDetials(props) {
             <div  className="col text-center">
             <div className="col ">
                 <div className="card" id="center1">
-                     <  img src={data.url} className="card-img-top" alt="..." />
+                     <  img src={food.url} className="card-img-top" alt="..." />
                         <div className="card-body">
-                        <h5 className="card-title">{data.name}</h5>
+                        <h5 className="card-title">{food.name}</h5>
                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <h3>Price:$<span>{data.price}</span></h3>
+                        <h3>Price:$<span>{food.price}</span></h3>
                     </div>
                 </div>
             </div>
@@ -63,7 +71,7 @@ export default function FoodDetials(props) {
             <div className="border">
             
             <h3>Total Item Orderd:{count} </h3>
-            <h4>Totla Price:{data.price}</h4>
+            <h4>Totla Price:{price}</h4>
             <Button id="center" onClick={
              handleOrder
             }>Place Order</Button>

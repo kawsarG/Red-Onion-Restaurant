@@ -24,3 +24,11 @@
     border: none;
     color: white;
   }
+  #cartbox{
+    background-color: red;
+    padding: 5px;
+    border-radius: 100%;
+    border: none;
+    color: white;
+  }
+  

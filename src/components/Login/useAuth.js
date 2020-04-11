@@ -34,7 +34,7 @@ const Auth=()=>{
             //toggle
             a.style.display='none';
         }
-        if(email!=undefined){
+        if(email!==undefined){
             var ul = document.getElementById("4");
             var li = document.createElement("li");
             var an=document.createTextNode(email);
@@ -59,7 +59,7 @@ const Auth=()=>{
     const SignOut=()=>{
         firebase.auth().signOut().then(function() {
             // Sign-out successful.
-            console.log("signout")
+            localStorage.clear();
           
           }).catch(function(error) {
             // An error happened.

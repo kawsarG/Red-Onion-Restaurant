@@ -17,7 +17,7 @@ import { AuthContextProvider } from './components/Login/useAuth';
 import Sigunup from './components/Signup/Sigunup';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './Context/CartContext';
-import Thankyou from './components/ThankYou/Thankyou';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 
 
 
@@ -45,16 +45,16 @@ function App() {
                   <FoodDetials></FoodDetials>
                   <Footer></Footer>
               </Route>
+              <Route path="/place-order">
+                <PlaceOrder></PlaceOrder>
+              <Footer></Footer>
+              </Route>
               <Route path="/cart">
                 <Cart></Cart>
               <Footer></Footer>
               </Route>
               <Route path="/signup">
                 <Sigunup></Sigunup>
-              <Footer></Footer>
-              </Route>
-              <Route path="/Thankyou">
-                <Thankyou></Thankyou>
               <Footer></Footer>
               </Route>
               <Route path="*">
